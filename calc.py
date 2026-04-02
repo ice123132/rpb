@@ -4,7 +4,9 @@ def main():
     x = int(input("x > "))
     y = int(input("y > "))
 
-    print("%d / %d = %0.3f" % (x, y, divide(x, y)))
+    result = divide(x, y)
+    if result is not None:
+        print("%d / %d = %.3f" % (x, y, result))
 
 
 def add(a, b):
@@ -16,3 +18,6 @@ def divide(x, y):
         print("Error: cannot divide by zero.")
         return None
     return x / y
+
+if __name__ == "__main__":
+    main()
